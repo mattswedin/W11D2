@@ -1,6 +1,7 @@
 import React from "react";
 import { TodoListItem } from "./todo_list_item";
-import TodoForm from "./todo_form";
+import TodoFormContainer from "./todo_form_container";
+
 
 export const TodoList = (props) =>{ 
     
@@ -16,7 +17,7 @@ export const TodoList = (props) =>{
                 }
             </ul>
             <div>
-                <TodoForm />
+                <TodoFormContainer />
             </div>
         </div>
     )
