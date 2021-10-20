@@ -34,13 +34,14 @@ export const stepsReducer = (state = intialState, action) => {
         return nextState;
 
         case RECEIVE_STEP:
-            nextState[action.step.id] = step.id;
+            nextState[action.step.id] = action.step;
             return nextState;
 
         case REMOVE_STEP:
+            nextState = {};
             Object.values(state).forEach(step => {
                 if(step.id !== action.step.id){
-                    nextState[step.id] = step
+                    nextState[step.id] = step;
                 }
             })
             return nextState;

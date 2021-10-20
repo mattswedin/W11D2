@@ -2,14 +2,14 @@ export const RECEIVE_STEPS = 'RECEIVE_STEPS';
 export const RECEIVE_STEP = 'RECEIVE_STEP';
 export const REMOVE_STEP = 'REMOVE_STEP';
 
-export const recieveSteps = (steps) => {
+export const receiveSteps = (steps) => {
     return {
         type: RECEIVE_STEPS,
         steps
     }
 }
 
-export const recieveStep = (step) => {
+export const receiveStep = (step) => {
     return {
         type: RECEIVE_STEP,
         step
@@ -23,6 +23,6 @@ export const removeStep = (step) => {
     }
 }
 
-window.recieveStep = recieveStep;
-window.recieveSteps = recieveSteps;
+window.receiveStep = receiveStep;
+window.receiveSteps = receiveSteps;
 window.removeStep = removeStep;
