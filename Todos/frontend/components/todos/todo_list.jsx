@@ -4,7 +4,6 @@ import TodoFormContainer from "./todo_form_container";
 
 
 export const TodoList = (props) =>{ 
-    
     return(
         <div>
             <h1>Todo List</h1>
@@ -12,7 +11,8 @@ export const TodoList = (props) =>{
             <ul>
                 {
                     props.todos.map(todo => 
-                        <TodoListItem key={todo.id} todo={todo}/>
+                        <TodoListItem key={todo.id} todo={todo} removeTodo={props.removeTodo} receiveTodo={props.receiveTodo}/>
+                        
                     )
                 }
             </ul>

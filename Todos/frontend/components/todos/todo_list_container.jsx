@@ -4,6 +4,7 @@ import { TodoList } from "./todo_list";
 import { allTodos } from "../../reducers/selectors";
 import { receiveTodos } from "../../actions/todo_actions";
 import { receiveTodo } from "../../actions/todo_actions";
+import { removeTodo } from "../../actions/todo_actions";
 
 const mapStateToProps = (state) => {
     return {
@@ -13,7 +14,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        receiveTodo: todo => dispatch(receiveTodo(todo))
+        receiveTodo: todo => dispatch(receiveTodo(todo)),
+        removeTodo: todo => dispatch(removeTodo(todo))
     }
 }
 
