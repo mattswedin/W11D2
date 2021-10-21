@@ -6,8 +6,10 @@ import {receiveTodo} from './frontend/actions/todo_actions'
 import {Root} from './frontend/components/root'
 import {allTodos} from './frontend/reducers/selectors'
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    const root = document.querySelector('.root')
+    const root = document.querySelector('#root')
     const store = configureStore()
     ReactDOM.render(<Root store={store} />, root)
     window.store = store;
